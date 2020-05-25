@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.wechat.mapper.GroudChatMapper">
+  <resultMap id="BaseResultMap" type="com.example.wechat.domain.GroudChat">
+    <!--@mbg.generated generated on Tue Apr 21 16:55:06 CST 2020.-->
+    <!--@Table groud_chat-->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="owner_id" jdbcType="INTEGER" property="ownerId" />
+    <result column="groudname" jdbcType="VARCHAR" property="groudname" />
+    <result column="avatar" jdbcType="VARCHAR" property="avatar" />
+    <result column="announcement" jdbcType="VARCHAR" property="announcement" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated generated on Tue Apr 21 16:55:06 CST 2020.-->
+    id, owner_id, groudname, avatar, announcement, create_time
+  </sql>
+</mapper>

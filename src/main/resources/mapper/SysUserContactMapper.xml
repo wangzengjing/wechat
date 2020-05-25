@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.wechat.mapper.SysUserContactMapper">
+  <resultMap id="BaseResultMap" type="com.example.wechat.domain.SysUserContact">
+    <!--@mbg.generated generated on Fri Apr 03 12:02:03 CST 2020.-->
+    <!--@Table sys_user_contact-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="contact_id" jdbcType="INTEGER" property="contactId" />
+    <result column="nickname" jdbcType="VARCHAR" property="nickname" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated generated on Fri Apr 03 12:02:03 CST 2020.-->
+    id, user_id, contact_id,nickname
+  </sql>
+
+</mapper>

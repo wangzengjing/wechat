@@ -1,0 +1,66 @@
+spring:
+  application:
+    name: wechat
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/wemedia?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
+    hikari:
+      minimum-idle: 5
+      idle-timeout: 600000
+      maximum-pool-size: 10
+      auto-commit: true
+      pool-name: MyHikariCP
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+  devtools:
+    restart:
+      enabled: true  #设置开启热部署
+    freemarker:
+      cache: false    #页面不加载缓存，修改即时生效
+
+  redis:
+    host: 127.0.0.1 #redis服务器地址
+    timeout: 10000ms #超时时间
+    database: 0 #0-15 16个库 默认0
+    port: 6379
+    lettuce:
+      pool:
+        max-active: 8 #最大连接数
+        max-wait: -1ms #默认-1 最大连接阻塞等待时间
+        max-idle: 8 #最大空闲连接 默认8
+        min-idle: 0 #最小空闲连接
+  mvc:
+    static-path-pattern: /**
+
+  resources:
+    static-locations: file:${image.path}
+
+
+
+mybatis:
+  type-aliases-package: com.example.wechat.domain
+  mapper-locations: classpath:mapper/*.xml
+
+
+valid:
+  time: 5       #验证码有效时间
+  width: 250    #生成验证码的宽度
+  height: 100   #生成验证码的长度
+  codecount: 4  #验证码个数
+
+
+image:
+  path: E:\\image\\
+
+
+#
+#server:
+#  servlet:
+#    session:
+#      timeout: 180
+
+
